@@ -33,6 +33,14 @@ describe "UserPages" do
         it "should change the count value" do
           expect { click_button submit }.to change(User, :count).by(1)
         end
+        
+        describe "after save" do
+          before { click_button submit }
+          let(:user) { User.find_by(email: "example@asd123.com") }
+
+          it { should have_link("Sign out") }
+          it { should have_selector('div.alert.alert-success', text: 'You have registered successfully!') }
+        end
       end
     end
 end
