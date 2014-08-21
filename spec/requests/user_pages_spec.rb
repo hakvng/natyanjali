@@ -43,4 +43,21 @@ describe "UserPages" do
         end
       end
     end
+
+    describe "edit" do
+      let(:user) { FactoryGirls.create(:user) }
+      before { visit edit_user_path(user) }
+
+      describe "page" do
+        it { should have_content("Update profile") }
+        it { should have_link("Change", href: 'http://gravatar.com/emails') }
+
+      end
+
+      describe "On  invlaid data" do
+        before { click_button("Save changes") }
+
+        it { should have_content('error') }
+      end
+  end
 end
