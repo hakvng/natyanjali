@@ -58,3 +58,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+#papaer clip for file upload
+gem "paperclip", "~> 4.2"
+gem 'hermitage'
