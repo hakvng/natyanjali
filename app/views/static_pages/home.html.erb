@@ -1,13 +1,100 @@
-<div class="center hero-unit">
-  <h1>Welcome to the the App</h1>
-
-  <h2>
-    This is the home page for the
-    dance school application.
-  </h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Thu, 11 Sep 2014 11:22:06 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <!--<link rel="stylesheet" type="text/css" href="newstyle.css" ></link>-->
+	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/home.css" ></link>
+	<!-- <link rel="stylesheet" type="text/css" href="js-image-slider.css" ></link> -->
+	
+    </head>
+  <body>
+  <div style="position: relative;" id="navg" class="navigation">
+  <div class="logo">
   
-  <% if !signed_in? %>
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-  <%end%>
+  </div>
+<div class="logincontainer">
+<!-- <div id="regmain" class="register" style="width:125px;height:30px;border:1px solid #000;"><div class="regtext" style=" text-align:center;">
+<a href="#"> REGISTER!</a></div></div>
+ -->
+<div class="login">
+<form id="loginform" name="loginform">
+<table style="margin:10px;">
+	
+	<tr>
+	<td ><input class="text" type="text" placeholder="Username"></td>
+	<td class="tb" style="padding-left:20px"><input class="text" type="password" placeholder ="Password"></td>
+	<td > <div class="loginbtn">
+	<a class="log" href='#'>Login</a></div> </td>
+	</tr>
+</table>
+</form>
 </div>
+</div>	
+<div style="top: 103px;" id="shdw" class="shdw"></div>
+</div>
+	<div class="serachmenucontainer" style="position: relative;">
+ <div class="samplemenu">
+	
+	<div class="menu"><li class="unli"><a href="/">HOME</a></li></div>
+	<div class="menu"><li class="unli"><a href="/expression">EXPRESSION</a></li></div>
+	<div class="menu"><li class="unli"><a href="/images">GALLERY</a></li></div>
+	<div class="menu"><li class="unli"><a href="#">ENROLLMENT</a></li></div>
+	<div class="menu"><li class="unli"><a href="/classes">CLASSES and FEES</a></li></div>
+	<div class="menu"><li class="unli"><a href="#">SITE MAP</a></li></div>
+	<div class="menu"><li class="unli"><a href="/about">ABOUT US</a></li></div>
+	<div class="menu"><li class="unli"><a href="/contact">CONTACT</a></li></div>
+</div>
+	  
+	  <!--<div class="search">
+	  <form id="searcform" name="searchform">
+	  <table>
+	  <tr>
+	  <td>
+	  <input class="searchbox" type="text" placeholder="Search"></td>
+	  <td> 
+	  <div class="searchbtn">
+	  <a class="searchlink" href="" >Search</a></div></td>
+	  </tr>
+	  </table>
+	  </form>
+	  </div>
+	  -->
+	</div>
+<div id="hadercontainer">  
+	<div class="header">
+		<div id="slider">
+			<%= image_tag "image1.jpg" %>
+			<%= image_tag "image2.jpg" %>
+			<%= image_tag "image1.jpg" %>
+			<%= image_tag "image2.jpg" %>
+			<%= image_tag "image1.jpg" %>
+		</div>
+	</div>
+		<!-- <div class="header2">
+		<div id="slider2">
+		<img src="img4.jpg" alt="">
+		<img src="img1.jpg" alt="">
+		<img src="img2.jpg" alt="">
+		<img src="img3.jpg" alt="">
+		<img src="img4.jpg" alt="">
+		</div>
+		</div> -->
+</div>   
+<div class="textcontainer">
+<div class="textarea">
+ <p>I welcome you to natyanjali school of classical dances and music , an institute devoted to dance. Here you will learn and perform various types of Indian dance forms.The major dance form at the academy is the Indian classical style "Bharatnatyam". Besides the classical style, we also perform semi-classical and Indian folk style dance.</p>
+<h3> My Dream</h2>
 
+<hr>
+ <p>I dream of building a society of dancers in the valley of nature. It’s a  place where everything has a soul in dance. A space where you breathe, eat, sleep, dream, talk and walk through dance. Our class room is a place where dancers drop negative qualities such as jealousy, small-mindedness, greed and malice to embrace their colleagues as sisters and support each other in their journey towards becoming dancers of merit.
+</p>
+</div>
+</div>
+	 
+ </body>
+</html>

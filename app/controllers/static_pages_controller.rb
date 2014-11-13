@@ -7,4 +7,11 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def expression
+  end
+
+  def classes
+  end
+
 end

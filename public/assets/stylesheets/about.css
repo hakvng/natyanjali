@@ -1,0 +1,51 @@
+body {
+ background-color:#fff;
+ color:#000;
+ }
+ 
+.aboutcontainer {
+ width:100%;
+ height:auto;
+ float:left;
+ }
+ h3 {
+	padding-left:20px;
+	text-align:center;
+	color:#d4008c;}
+ hr {
+	color:#d4008c;}
+ p {
+   padding-left:20px;
+   color:#197b9e;
+   }
+.subcontainer {
+   margin-top:10px;
+   width:1120px;
+   height:720px;
+   margin-left:auto;
+   margin-right:auto;
+   //background-color:#90c9db;
+   -moz-box-shadow: 0 0 5px #555656;
+		-webkit-box-shadow: 0 0 5px #555656;
+	box-shadow: 0 0 5px #555656;
+	border-radius:10px;
+   }
+ .aboutus{
+  width:500px;
+  height:300px;
+  position:relative;
+  margin-left:40px;
+  margin-top:40px;
+  //margin-bottom:20px;
+  margin-right:auto;
+  //background-color:yellow;
+  border-radius:10px;
+  float:left;
+  //-moz-box-shadow: 0 0 5px #555656;
+	//	-webkit-box-shadow: 0 0 5px #555656;
+		//box-shadow: 0 0 5px #555656;
+	//background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(191,191,191,1)); /* For Safari 5.1 to 6.0 */
+    //background: -o-linear-gradient(bottom, rgba(0,0,0,0), rgba(191,191,191,1)); /* For Opera 11.1 to 12.0 */
+    //background: -moz-linear-gradient(bottom, rgba(0,0,0,0), rgba(191,191,191,1)); /* For Firefox 3.6 to 15 */
+	//background: linear-gradient(bottom, rgba(0,0,0,0), rgba(191,191,191,1)); /* Standard syntax (must be last) */
+  }
