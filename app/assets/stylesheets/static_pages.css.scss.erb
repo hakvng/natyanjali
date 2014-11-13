@@ -1,6 +1,15 @@
-
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* natyanjali.css */
+
+
+@import 'static_pages_about';
+@import 'static_pages_classes';
+@import 'static_pages_expression';
+@import 'static_pages_nexthtml';
+
 
 body {
       color:#000000;
@@ -113,7 +122,7 @@ border-bottom-color: #061D3D;}
 .logo {
 		width:320px;
 		height:80px;
-		background-image:url('/assets/images/logo.png');
+		background-image:url(<%= asset_path 'logo.png' %>);
 		float:left;
     }
  .text{
