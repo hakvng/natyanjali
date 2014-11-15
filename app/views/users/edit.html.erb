@@ -1,3 +1,4 @@
+<div class=container>
 <h1>Update profile</h1>
 
 <div class="row">
@@ -15,10 +16,57 @@
 
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+
+      <%= f.label :phone %>
+      <%= f.telephone_field :phone %>
+
+      <%= f.label :sex %>
+      <%= select_tag(:sex, options_for_select([['Male', 'M'], ['Female', 'F']])) %>
+
+      <%= f.label :dob, "Date of Birth" %>
+      <%= f.date_field :dob %>
+
+      <%= f.label :school, "Name of school" %>
+      <%= f.text_field :school %>
+
+      <%= f.label :school_class, "Class" %>
+      <%= f.text_field :school_class %>
+
+      <%= f.label :f_name, "Father's name" %>
+      <%= f.text_field :f_name %>
+
+      <%= f.label :f_occupation, "Father's occupation" %>
+      <%= f.text_field :f_occupation %>
+
+      <%= f.label :m_name, "Mother's name" %>
+      <%= f.text_field :m_name %>
+
+      <%= f.label :m_occupation, "Mother's occupation" %>
+      <%= f.text_field :m_occupation %>
+
+      <%= f.label :dance_school, "Name of dance school"%>
+      <%= f.text_field :dance_school %>
+
+      <%= f.label :dance_teacher, "Name of dance teacher" %>
+      <%= f.text_field :dance_teacher %>
+
+      <%= f.label :dance_years, "No of years studied" %>
+      <%= f.number_field :dance_years %>
+
+      <%= f.label :g_name, "Name of Guardian" %>
+      <%= f.text_field :g_name %>
+
+      <%= f.label :place %>
+      <%= f.text_field :place %>
+
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>
 
     <%= gravatar_for @user %>
     <a href="http://gravatar.com/emails">change</a>
   </div>
+</div>
 </div>
