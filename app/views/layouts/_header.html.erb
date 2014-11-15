@@ -12,8 +12,28 @@
 </form>-->
 
     <%= form_for(:session, url: sessions_path) do |f|  %>
-      <%= f.text_field :email, placeholder:"email id" %>
-      <%= f.password_field :password, placeholder:"password" %>
+      <%= f.text_field :email, placeholder:"email id", class: "text", style:'padding-left:20px;
+background-color:transparent;
+border-left:none;
+		border-top:none;
+		border-right:none;
+		border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: #0ec405;
+		width:250px;
+		height:30px;
+		margin-left:20px;' %>
+      <%= f.password_field :password, placeholder:"password", class:"text",style:'padding-left:20px;
+background-color:transparent;
+border-left:none;
+		border-top:none;
+		border-right:none;
+		border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: #0ec405;
+		width:250px;
+		height:30px;
+		margin-left:20px;' %>
 
       <%= f.submit "Login", class: "loginbtn"%>
     <%end%>
