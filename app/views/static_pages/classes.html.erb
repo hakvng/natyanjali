@@ -8,10 +8,11 @@
     <meta name="keywords" content="">
     <title></title>
     <!--<link rel="stylesheet" type="text/css" href="newstyle.css" ></link>-->
-	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/home.css" ></link>
-	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/classes.css" ></link>
+	<link rel="stylesheet" type="text/css" href="natyanjali.css" ></link>
+	<link rel="stylesheet" type="text/css" href="classes.css" ></link>
 	<!-- <link rel="stylesheet" type="text/css" href="js-image-slider.css" ></link> -->
-	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="/assets/javascripts/classes.js"></script>
     </head>
   <body>
   <div style="position: relative;" id="navg" class="navigation">
@@ -24,30 +25,40 @@
 	<div class="serachmenucontainer" style="position: relative;">
  <div class="samplemenu">
 	
-	<div class="menu"><li class="unli"><a href="/">HOME</a></li></div>
-	<div class="menu"><li class="unli"><a href="/expression">EXPRESSION</a></li></div>
-	<div class="menu"><li class="unli"><a href="/images">GALLERY</a></li></div>
-	<div class="menu"><li class="unli"><a href="#">ENROLLMENT</a></li></div>
-	<div class="menu"><li class="unli"><a href="/classes">CLASSES and FEES</a></li></div>
-	<div class="menu"><li class="unli"><a href="#">SITE MAP</a></li></div>
-	<div class="menu"><li class="unli"><a href="/about">ABOUT US</a></li></div>
-	<div class="menu"><li class="unli"><a href="/contact">CONTACT</a></li></div>
-</div>    
+	<div class="menu"> <a href="/">HOME</a> </div>
+	<div class="menu"> <a href="/expression">EXPRESSION</a> </div>
+	<div class="menu"> <a href="/images">GALLERY</a> </div>
+	<div class="menu"> <a href="">ENROLLMENT</a> </div>
+	<div class="menu"> <a href="/classes">CLASSES and FEES</a> </div>
+	
+	<div class="menu"> <a href="/about">ABOUT US</a> </div>
+	<div class="menu"> <a href="/contact">CONTACT</a> </div>
+</div>	  
 	</div>
 	<div class="maincontainer">
-		
+	
+	<div class="submenu">
+			<div class="smenu"><a id="button1" href="#" class="barath" tabindex="1">Arangettam</a></div>
+			<div class="smenu"><a id="button2" href="#" tabindex="2" >Fee Structure</a></div>
+			<div class="smenu"><a id="button3" href="#" class="qwerty" tabindex="3">Classes</a></div>
+			<div class="smenu"><a id="button4" href="#" tabindex="4">Refund Policy</a></div>
+			
+		</div>
+	
 		<div class="arcon">
-			<div class="arangetamdiv">
+			
+			<div id="arang">
 				<h3>Arangettam</h3>	
 				<hr>
 				<p>
 					The basic Certificate course conducted at all the branches. In this a student learns the basics of Bharat Natyam and acquires a minimum quality level of a dancer. It is aimed more at creating appreciation and giving sound knowledge base of dance. As part of the training every student performs annually on stage and thus gains confidence at personal level. Here the concentration is on perfecting the technique. The guru has to dedicate considerable time for the one-to-one classes, give special training sessions for the student and conduct several rehearsals with a live orchestra.
 				</p>
 				
+			
 			</div>
 			
 			
-			<div class="arangetamdiv">
+     			<div id="fees">
 				<h3>Fee Structure</h3>	
 				<hr>
 				<table class="feestable">
@@ -64,10 +75,11 @@
 								<td colspan="2" style="color:green">FEE STRUCTURE: Rs:300/- per month</td>
 							</tr>
 					</table>
-				
-			</div>
+				</div>
 			
-			<div class="arangetamdiv">
+			
+			
+			<div id="class">
 				<h3>Classes</h3>
 					<hr>
 					<ul class="clas">
@@ -81,8 +93,7 @@
 				NOTE: There are short-term courses available e.g. 3 months, 6 months, 12 months for outstation candidates.
 				</p>
 			</div>
-			
-			<div class="arangetamdiv">
+			<div id="refun">
 				<h3>Refund Policy</h3>
 					<hr>
 					<ul class="clas">
@@ -94,7 +105,8 @@
 						<li>Any  problems  due  to  unusual  circumstances  should  be  discussed  with  the  director.</li>
 					</ul>
 			</div>
-		</div>			
+		</div>	
+					
 	</div>
 		
 </body>

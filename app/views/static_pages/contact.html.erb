@@ -8,10 +8,28 @@
     <meta name="keywords" content="">
     <title></title>
     <!--<link rel="stylesheet" type="text/css" href="newstyle.css" ></link>-->
-	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/home.css" ></link>
-	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/classes.css" ></link>
+	<link rel="stylesheet" type="text/css" href="natyanjali.css" ></link>
+	<link rel="stylesheet" type="text/css" href="classes.css" ></link>
 	<!-- <link rel="stylesheet" type="text/css" href="js-image-slider.css" ></link> -->
-	
+
+
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+
+<script>
+function initialize()
+{
+var mapProp = {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+var map=new google.maps.Map(document.getElementById("googleMap")
+  ,mapProp);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
     </head>
   <body>
   <div style="position: relative;" id="navg" class="navigation">
@@ -24,15 +42,15 @@
 	<div class="serachmenucontainer" style="position: relative;">
  <div class="samplemenu">
 	
-	<div class="menu"><li class="unli"><a href="/">HOME</a></li></div>
-	<div class="menu"><li class="unli"><a href="/expression">EXPRESSION</a></li></div>
-	<div class="menu"><li class="unli"><a href="/images">GALLERY</a></li></div>
-	<div class="menu"><li class="unli"><a href="#">ENROLLMENT</a></li></div>
-	<div class="menu"><li class="unli"><a href="/classes">CLASSES and FEES</a></li></div>
-	<div class="menu"><li class="unli"><a href="#">SITE MAP</a></li></div>
-	<div class="menu"><li class="unli"><a href="/about">ABOUT US</a></li></div>
-	<div class="menu"><li class="unli"><a href="/contact">CONTACT</a></li></div>
-</div>
+	<div class="menu"> <a href="/">HOME</a> </div>
+	<div class="menu"> <a href="/expression">EXPRESSION</a> </div>
+	<div class="menu"> <a href="/images">GALLERY</a> </div>
+	<div class="menu"> <a href="">ENROLLMENT</a> </div>
+	<div class="menu"> <a href="/classes">CLASSES and FEES</a> </div>
+	
+	<div class="menu"> <a href="/about">ABOUT US</a> </div>
+	<div class="menu"> <a href="/contact">CONTACT</a> </div>
+</div>	  
 	</div>
 <div class="contactconatiner">
 		<div class="cont1">
@@ -48,10 +66,13 @@
 				
 			</p>
 			</div>
-			<div class="sitemap">
-			<h3>Site Map</h3>
+			<!-- <div class="sitemap" style="width:500px;height:380px;">
+			
+<h3>Site Map</h3>
 			<hr>
-			</div>
+			</div> -->
+<div class="sitemap" id="googleMap" style="width:500px;height:380px;"></div>
+
 		</div>	
 </div>
 </body>
