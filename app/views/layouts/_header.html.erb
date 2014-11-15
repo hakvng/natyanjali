@@ -2,12 +2,23 @@
 <div class="logo"></div>
 <div class="logincontainer">
 <div class="login">
-<form id="loginform" name="loginform">
+
+
+<!--<form id="loginform" name="loginform">
 <input class="text" type="text" placeholder="Username" style="height:30px">
 	<input class="text" type="password" placeholder ="Password" style="height:30px">
 	 <div class="loginbtn" style="padding-top: 5px">
 	<a class="log" href='#'>Login</a></div>
-</form>
+</form>-->
+
+    <%= form_for(:session, url: sessions_path) do |f|  %>
+      <%= f.text_field :email, placeholder:"email id" %>
+      <%= f.password_field :password, placeholder:"password" %>
+
+      <%= f.submit "Login", class: "loginbtn"%>
+    <%end%>
+
+
 </div>
 </div><div style="top: 103px;" id="shdw" class="shdw"></div>
 </div>
