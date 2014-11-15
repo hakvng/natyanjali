@@ -29,6 +29,11 @@ nav li {
     position: relative;
 	
 }
+
+#navg {
+    padding: 10px;
+}
+
 .nav a:hover {
 border-bottom-width: 3px;
 border-bottom-style: solid;
@@ -127,6 +132,7 @@ border-bottom-color: #0ec405;
 } 
 .logincontainer {float:right;
                padding-right:50px;
+               padding-top: 30px;
                			   
                 }
 .login {float:left;
@@ -728,7 +734,7 @@ width:80%;
 height:400px;
 margin-left:auto;
 margin-right:auto;
-background-color:#000;
+//background-color:#000;
 //box-shadow: 0 0 10px #555656;
 	//border-radius:10px;
 overflow:hidden;
@@ -740,7 +746,7 @@ width:80%;
 height:400px;
 margin-left:auto;
 margin-right:auto;
-background-color:#000;
+//background-color:#000;
 box-shadow: 0 0 10px #555656;
 	border-radius:10px;
 overflow:hidden;
@@ -749,8 +755,8 @@ display:block;
 	}
 .smenu {
 		width:auto;
-		height:30px;
-		background-color:#d4008c;
+		//height:30px;
+		background-color: rgba(179, 177, 178, 0.62);
 		float:left;
 		//margin-left:20px;
 		margin-right:auto;
@@ -761,7 +767,7 @@ display:block;
 
 .smenu:hover {
 		width:auto;
-		height:30px;
+		//height:30px;
 		background-color:#fff;
 		float:left;
 		//margin-left:20px;
