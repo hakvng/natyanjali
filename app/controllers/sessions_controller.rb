@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       redirect_back_or user
     else
       flash.now[:error] = "Invalid email/password"
-      render 'new'
+      render 'static_pages/home'
     end 
   end
   def destroy
