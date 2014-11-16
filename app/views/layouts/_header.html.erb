@@ -11,7 +11,7 @@
 	<a class="log" href='#'>Login</a></div>
 </form>-->
 
-    <%= form_for(:session, url: sessions_path) do |f|  %>
+    <%= form_for(:session, url: sessions_path, style:'margin-bottom:0px',id:'loginform') do |f|  %>
       <%= f.text_field :email, placeholder:"email id", class: "text", style:'padding-left:20px;
 background-color:transparent;
 border-left:none;
@@ -20,7 +20,7 @@ border-left:none;
 		border-bottom-width: 1px;
 border-bottom-style: solid;
 border-bottom-color: #0ec405;
-		width:250px;
+		width:200px;
 		height:30px;
 		margin-left:20px;' %>
       <%= f.password_field :password, placeholder:"password", class:"text",style:'padding-left:20px;
@@ -31,7 +31,7 @@ border-left:none;
 		border-bottom-width: 1px;
 border-bottom-style: solid;
 border-bottom-color: #0ec405;
-		width:250px;
+		width:200px;
 		height:30px;
 		margin-left:20px;' %>
 
@@ -48,7 +48,7 @@ border-bottom-color: #0ec405;
 	<div class="menu"> <a href="/">HOME</a> </div>
 	<div class="menu"> <a href="/expression">EXPRESSION</a> </div>
 	<div class="menu"> <a href="/images">GALLERY</a> </div>
-	<div class="menu"> <a href="">ENROLLMENT</a> </div>
+	<div class="menu"> <a href="/signup">ENROLLMENT</a> </div>
 	<div class="menu"> <a href="/classes">CLASSES and FEES</a> </div>
 	
 	<div class="menu"> <a href="/about">ABOUT US</a> </div>
