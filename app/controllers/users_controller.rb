@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
-  before_action :signed_in_user, only: [:show, :edit, :update]
+  before_action :signed_in_user, only: [:show, :edit, :update, :index]
   before_action :correct_user,   only: [:show, :edit, :update]
+  before_action :admin_user, only: :index
 
   def new
     @user = User.new
@@ -9,6 +10,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+  end
+
+  def index
+    @users = User.all
   end
 
   def create
@@ -50,7 +55,7 @@ class UsersController < ApplicationController
       unless signed_in?
         store_location
         flash[:danger] = "Please log in."
-        redirect_to login_url
+        redirect_to signin_url
       end
     end
 
@@ -60,5 +65,9 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user?(@user)
     end
 
+    # Confirms an admin user.
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
+    end
 
 end
