@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   // Hide div 2 by default
-  $('#arang').slideDown("slow" , function(){});
+  $('#arang').slideDown("2000" , function(){});
   $('#fees').hide();
   $('#class').hide();
   $('#refun').hide();
@@ -10,14 +10,14 @@ $(document).ready(function(){
   
   $('#button1').click(function(){ 
       
-  $('#arang').slideDown("slow" , function(){});
+  $('#arang').slideDown("2000" , function(){});
   $('#fees').hide();
   $('#class').hide();
   $('#refun').hide();
   });
 	$('#button2').click(function(){ 
       
-  $('#fees').slideDown("slow" , function(){});
+  $('#fees').slideDown("2000" , function(){});
   $('#arang').hide();
   $('#class').hide();
   $('#refun').hide();
@@ -26,7 +26,7 @@ $(document).ready(function(){
   
   $('#button3').click(function(){ 
       
-  $('#class').slideDown("slow" , function(){});
+  $('#class').slideDown("2000" , function(){});
   $('#arang').hide();
   $('#fees').hide();
   $('#refun').hide();
@@ -34,7 +34,7 @@ $(document).ready(function(){
   
   $('#button4').click(function(){ 
       
-  $('#refun').slideDown("slow" , function(){});
+  $('#refun').slideDown("2000" , function(){});
   $('#arang').hide();
   $('#class').hide();
   $('#fees').hide();

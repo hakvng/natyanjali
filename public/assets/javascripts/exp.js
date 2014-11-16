@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   // Hide div 2 by default
-  $('#faq').slideDown("slow" , function(){});
+  $('#faq').slideDown("2000" , function(){});
   $('#her').hide();
   $('#and').hide();
   $('#enj').hide();
@@ -11,7 +11,7 @@ $(document).ready(function(){
 
   
   $('#button1').click(function(){ 
-  $('#faq').slideDown("slow" , function(){});
+  $('#faq').slideDown("2000" , function(){});
   $('#her').hide();
   $('#and').hide();
   $('#enj').hide();
@@ -23,7 +23,7 @@ $(document).ready(function(){
 
   $('#button2').click(function(){ 
       
-  $('#her').slideDown("slow" , function(){});
+  $('#her').slideDown("2000" , function(){});
   $('#faq').hide();
   $('#and').hide();
   $('#enj').hide();
@@ -36,7 +36,7 @@ $(document).ready(function(){
       
   $('#her').hide();
   $('#faq').hide();
-  $('#and').slideDown("slow" , function(){});
+  $('#and').slideDown("2000" , function(){});
   $('#enj').hide();
   $('#manipuri').hide();
   $('#kuchipudi').hide();
@@ -48,7 +48,7 @@ $(document).ready(function(){
   $('#her').hide();
   $('#faq').hide();
   $('#and').hide();
-  $('#enj').slideDown("slow" , function(){});
+  $('#enj').slideDown("2000" , function(){});
   $('#manipuri').hide();
   $('#kuchipudi').hide();
   $('#odissi').hide();
@@ -61,7 +61,7 @@ $(document).ready(function(){
   $('#her').hide();
   $('#faq').hide();
   $('#and').hide();
-  $('#odissi').slideDown("slow" , function(){});
+  $('#odissi').slideDown("2000" , function(){});
   $('#manipuri').hide();
   $('#kuchipudi').hide();
   });
@@ -72,7 +72,7 @@ $(document).ready(function(){
   $('#her').hide();
   $('#faq').hide();
   $('#and').hide();
-  $('#kuchipudi').slideDown("slow" , function(){});
+  $('#kuchipudi').slideDown("2000" , function(){});
   $('#enj').hide();
   $('#odissi').hide();
   $('#manipuri').hide();
@@ -83,7 +83,7 @@ $(document).ready(function(){
   $('#her').hide();
   $('#faq').hide();
   $('#and').hide();
-  $('#manipuri').slideDown("slow" , function(){});
+  $('#manipuri').slideDown("2000" , function(){});
   $('#enj').hide();
   $('#odissi').hide();
   $('#kuchipudi').hide();
