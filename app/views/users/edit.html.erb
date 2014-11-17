@@ -9,81 +9,81 @@
 <div class="details" id="details">
 	<div class="details" id="details">
 	
-    <%= form_for (@user) do |f| %>
-      <%= render 'shared/error_messages' %>
+    <%= simple_form_for (@user) do |f| %>
+
 	<table class="signuptable">
 
 
     <tr>   
-<td><%= f.label :name %></td><td> <%= f.text_field :name, class:"textbox" %></td>
+<td><%= f.input :name %></td>
 
-	<td> <%= f.label :email %></td><td> <%= f.text_field :email, class:"textbox" %></td>
+	<td> <%= f.input :email %></td>
 </tr>
 		
 		<tr>
-			<td><%= f.label :password %></td><td><%= f.password_field :password, class:"textbox" %></td>
+			<td><%= f.input :password %></td>
 
-			<td><%= f.label :password_confirmation, "Confirmation" %></td><td><%= f.password_field :password_confirmation, class:"textbox" %></td>
+			<td><%= f.input :password_confirmation, label:"Confirmation" %></td>
 		</tr>
 		
 		<tr>
-			<td> <%= f.label :address %></td><td><%= f.text_area :address, class:"textbox", style:"width: 257px;
-height: 76px;" %></td>
+			<td> <%= f.input :address, label:"Address" %></td>
 		</tr>
 
 		<tr>
-			<td> <%= f.label :phone %></td><td> <%= f.telephone_field :phone, class:"textbox" %></td>
+			<td> <%= f.input :phone %></td>
 
-			<td> <%= f.label :sex %></td><td> <%= select_tag(:sex, options_for_select([['Male', 'M'], ['Female', 'F']])) %></td>
+			<td> <%= f.input :sex %></td>
 		</tr>
 		
 
 		<tr>
-			<td><%= f.label :dob, "Date of Birth" %></td><td> <%= f.date_field :dob, class:"textbox" %></td>
+			<td><%= f.input :dob, label: "Date of Birth" %></td>
 		</tr>
 		<tr>
-			<td>  <%= f.label :school, "Name of school" %></td><td>  <%= f.text_field :school, class:"textbox" %></td>
+			<td>  <%= f.input :school,label: "Name of school" %></td>
 
-			<td><%= f.label :school_class, "Class" %></td><td><%= f.text_field :school_class, class:"textbox" %></td>
+			<td><%= f.input :school_class,label: "Class" %></td>
 		</tr>
 
 		</div>
 
 		<tr>
-			<td> <%= f.label :f_name, "Father's name" %></td><td><%= f.text_field :f_name, class:"textbox" %></td>
+			<td> <%= f.input :f_name,label: "Father's name" %></td>
 
-			<td>  <%= f.label :f_occupation, "Father's occupation" %></td><td> <%= f.text_field :f_occupation, class:"textbox" %></td>
+			<td>  <%= f.input :f_occupation,label: "Father's occupation" %></td>
 		</tr>
 		
 		<tr>
-			<td><%= f.label :m_name, "Mother's name" %></td><td> <%= f.text_field :m_name, class:"textbox" %></td>
+			<td><%= f.input :m_name, label: "Mother's name" %></td>
 
-			<td> <%= f.label :m_occupation, "Mother's occupation" %></td><td><%= f.text_field :m_occupation, class:"textbox" %></td>
+			<td> <%= f.input :m_occupation, label: "Mother's occupation" %></td>
 		</tr>
 		
 		
 		<tr>
-			<td> <%= f.label :dance_school, "Name of dance school"%></td><td>  <%= f.text_field :dance_school, class:"textbox" %></td>
+			<td> <%= f.input :dance_school, label: "Name of dance school"%></td>
 
-			<td><%= f.label :dance_teacher, "Name of dance teacher" %></td><td><%= f.text_field :dance_teacher, class:"textbox" %>
-</td>
+			<td><%= f.input :dance_teacher, label: "Name of dance teacher" %></td>
 		</tr>
 		
 		<tr>
-			<td>  <%= f.label :dance_years, "No of years studied" %></td><td> <%= f.number_field :dance_years, class:"textbox", style:"width: 30px;" %></td>
+			<td>  <%= f.input :dance_years, label: "No of years studied" %></td>
 		</tr>
 		
 		<tr>
-			<td> <%= f.label :g_name, "Name of Guardian" %></td><td><%= f.text_field :g_name, class:"textbox" %>
-</td>
+			<td> <%= f.input :g_name, label: "Name of Guardian" %></td>
 
-			<td>  <%= f.label :place %></td><td> <%= f.text_field :place, class:"textbox" %>
-            </td>
+
+			<td>  <%= f.input :place %></td>
+
 		</tr>
-       
+<tr><td>
+        <%= f.submit 'Save' , style:"width:100px;height:40px", class:"btn btn-primary"%>
+      <% end %></td>
+</tr>
 </table>
- <%= f.submit "Apply", class: "btn btn-large btn-primary" %>
-      <% end %>
+
   </div>
 </div>
 
