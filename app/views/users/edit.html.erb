@@ -1,72 +1,89 @@
-<div class="container">
-<h1>Update profile</h1>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
+<h2 style="        color:#d4008c;
+        margin-left:50px;
+        padding-top:200px;
+        text-decoration:underline;
+        text-align:left;">User details:</h2>
+<hr/>
+<div class="signup">
+<div class="details" id="details">
+	<div class="details" id="details">
+	
+    <%= form_for (@user) do |f| %>
       <%= render 'shared/error_messages' %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+	<table class="signuptable">
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+    <tr>   
+<td><%= f.label :name %></td><td> <%= f.text_field :name, class:"textbox" %></td>
 
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation %>
+	<td> <%= f.label :email %></td><td> <%= f.text_field :email, class:"textbox" %></td>
+</tr>
+		
+		<tr>
+			<td><%= f.label :password %></td><td><%= f.password_field :password, class:"textbox" %></td>
 
-      <%= f.label :address %>
-      <%= f.text_field :address %>
+			<td><%= f.label :password_confirmation, "Confirmation" %></td><td><%= f.password_field :password_confirmation, class:"textbox" %></td>
+		</tr>
+		
+		<tr>
+			<td> <%= f.label :address %></td><td><%= f.text_area :address, class:"textbox", style:"width: 257px;
+height: 76px;" %></td>
+		</tr>
 
-      <%= f.label :phone %>
-      <%= f.telephone_field :phone %>
+		<tr>
+			<td> <%= f.label :phone %></td><td> <%= f.telephone_field :phone, class:"textbox" %></td>
 
-      <%= f.label :sex %>
-      <%= select_tag(:sex, options_for_select([['Male', 'M'], ['Female', 'F']])) %>
+			<td> <%= f.label :sex %></td><td> <%= select_tag(:sex, options_for_select([['Male', 'M'], ['Female', 'F']])) %></td>
+		</tr>
+		
 
-      <%= f.label :dob, "Date of Birth" %>
-      <%= f.date_field :dob %>
+		<tr>
+			<td><%= f.label :dob, "Date of Birth" %></td><td> <%= f.date_field :dob, class:"textbox" %></td>
+		</tr>
+		<tr>
+			<td>  <%= f.label :school, "Name of school" %></td><td>  <%= f.text_field :school, class:"textbox" %></td>
 
-      <%= f.label :school, "Name of school" %>
-      <%= f.text_field :school %>
+			<td><%= f.label :school_class, "Class" %></td><td><%= f.text_field :school_class, class:"textbox" %></td>
+		</tr>
 
-      <%= f.label :school_class, "Class" %>
-      <%= f.text_field :school_class %>
+		</div>
 
-      <%= f.label :f_name, "Father's name" %>
-      <%= f.text_field :f_name %>
+		<tr>
+			<td> <%= f.label :f_name, "Father's name" %></td><td><%= f.text_field :f_name, class:"textbox" %></td>
 
-      <%= f.label :f_occupation, "Father's occupation" %>
-      <%= f.text_field :f_occupation %>
+			<td>  <%= f.label :f_occupation, "Father's occupation" %></td><td> <%= f.text_field :f_occupation, class:"textbox" %></td>
+		</tr>
+		
+		<tr>
+			<td><%= f.label :m_name, "Mother's name" %></td><td> <%= f.text_field :m_name, class:"textbox" %></td>
 
-      <%= f.label :m_name, "Mother's name" %>
-      <%= f.text_field :m_name %>
+			<td> <%= f.label :m_occupation, "Mother's occupation" %></td><td><%= f.text_field :m_occupation, class:"textbox" %></td>
+		</tr>
+		
+		
+		<tr>
+			<td> <%= f.label :dance_school, "Name of dance school"%></td><td>  <%= f.text_field :dance_school, class:"textbox" %></td>
 
-      <%= f.label :m_occupation, "Mother's occupation" %>
-      <%= f.text_field :m_occupation %>
+			<td><%= f.label :dance_teacher, "Name of dance teacher" %></td><td><%= f.text_field :dance_teacher, class:"textbox" %>
+</td>
+		</tr>
+		
+		<tr>
+			<td>  <%= f.label :dance_years, "No of years studied" %></td><td> <%= f.number_field :dance_years, class:"textbox", style:"width: 30px;" %></td>
+		</tr>
+		
+		<tr>
+			<td> <%= f.label :g_name, "Name of Guardian" %></td><td><%= f.text_field :g_name, class:"textbox" %>
+</td>
 
-      <%= f.label :dance_school, "Name of dance school"%>
-      <%= f.text_field :dance_school %>
-
-      <%= f.label :dance_teacher, "Name of dance teacher" %>
-      <%= f.text_field :dance_teacher %>
-
-      <%= f.label :dance_years, "No of years studied" %>
-      <%= f.number_field :dance_years %>
-
-      <%= f.label :g_name, "Name of Guardian" %>
-      <%= f.text_field :g_name %>
-
-      <%= f.label :place %>
-      <%= f.text_field :place %>
-
-      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
-    <% end %>
-
-    <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails">change</a>
+			<td>  <%= f.label :place %></td><td> <%= f.text_field :place, class:"textbox" %>
+            </td>
+		</tr>
+       
+</table>
+ <%= f.submit "Apply", class: "btn btn-large btn-primary" %>
+      <% end %>
   </div>
 </div>
-</div>
+
