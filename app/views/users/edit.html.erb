@@ -1,88 +1,13 @@
 
-<h2 style="        color:#d4008c;
-        margin-left:50px;
-        padding-top:200px;
-        text-decoration:underline;
-        text-align:left;">User details:</h2>
+<h2>User details:</h2>
 <hr/>
 <div class="signup">
 <div class="details" id="details">
 	<div class="details" id="details">
 	
-    <%= simple_form_for (@user) do |f| %>
+	<% $bt_text="Save" %>
+    <%= render 'form' %>
 
-	<table class="signuptable">
-
-
-    <tr>   
-<td><%= f.input :name %></td>
-
-	<td> <%= f.input :email %></td>
-</tr>
-		
-		<tr>
-			<td><%= f.input :password %></td>
-
-			<td><%= f.input :password_confirmation, label:"Confirmation" %></td>
-		</tr>
-		
-		<tr>
-			<td> <%= f.input :address, label:"Address" %></td>
-		</tr>
-
-		<tr>
-			<td> <%= f.input :phone %></td>
-
-			<td> <%= f.input :sex %></td>
-		</tr>
-		
-
-		<tr>
-			<td><%= f.input :dob, label: "Date of Birth" %></td>
-		</tr>
-		<tr>
-			<td>  <%= f.input :school,label: "Name of school" %></td>
-
-			<td><%= f.input :school_class,label: "Class" %></td>
-		</tr>
-
-		</div>
-
-		<tr>
-			<td> <%= f.input :f_name,label: "Father's name" %></td>
-
-			<td>  <%= f.input :f_occupation,label: "Father's occupation" %></td>
-		</tr>
-		
-		<tr>
-			<td><%= f.input :m_name, label: "Mother's name" %></td>
-
-			<td> <%= f.input :m_occupation, label: "Mother's occupation" %></td>
-		</tr>
-		
-		
-		<tr>
-			<td> <%= f.input :dance_school, label: "Name of dance school"%></td>
-
-			<td><%= f.input :dance_teacher, label: "Name of dance teacher" %></td>
-		</tr>
-		
-		<tr>
-			<td>  <%= f.input :dance_years, label: "No of years studied" %></td>
-		</tr>
-		
-		<tr>
-			<td> <%= f.input :g_name, label: "Name of Guardian" %></td>
-
-
-			<td>  <%= f.input :place %></td>
-
-		</tr>
-<tr><td>
-        <%= f.submit 'Save' , style:"width:100px;height:40px", class:"btn btn-primary"%>
-      <% end %></td>
-</tr>
-</table>
 
   </div>
 </div>

@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
-    <meta name="dcterms.created" content="Thu, 11 Sep 2014 11:22:06 GMT">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+<head>
 
-    <title>Natyanjali</title>
-    <%= stylesheet_link_tag "application", media: "all",
-                                           "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %>
-  </head>
-  <body style="background-color: #F5F5F5;border: 1px solid rgba(0, 0, 0, 0.15)">
-    <%= render 'layouts/header' %>
-    <div class="main_container">
-      <div class='error_class'>
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%=key%>"><%=value%></div>
-      <%end%>
-    </div>
-      <%= yield %>
+<meta charset="utf-8">
+<meta name="generator"
+	content="CoffeeCup HTML Editor (www.coffeecup.com)">
+<meta name="dcterms.created" content="Thu, 11 Sep 2014 11:22:06 GMT">
+<meta name="description" content="">
+<meta name="keywords" content="">
 
-      <%= debug(params) if Rails.env.development? %>
-    </div>
-  </body>
+<title>Natyanjali</title>
+
+	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+	<%= render 'layouts/shim' %>
+
+</head>
+
+<body>
+	<%= render 'layouts/header' %>
+	<div class="container">
+		<% flash.each do |key, value| %>
+		<div class="alert alert-<%=key%>">
+			<%=value%>
+		</div>
+		<%end%>
+		<%= yield %> 
+		<%= debug(params) if Rails.env.development? %>
+	</div>
+</body>
 </html>
