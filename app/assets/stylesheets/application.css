@@ -10,6 +10,4 @@
  *
  *= require_self
  *= require bootstrap
- *= require_tree .
- *= require static_pages
  */

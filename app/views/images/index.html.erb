@@ -3,11 +3,9 @@
 height: 170px;
 }
 </style>
-<div class="container">
 
 <%= render_gallery_for @images, original: "image_full", thumbnail: "image_thumb" , title: 'title' %>
 
 <br>
 
 <%= link_to 'New Image', new_image_path %>
-</div>
