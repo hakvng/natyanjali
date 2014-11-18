@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141116151819) do
+ActiveRecord::Schema.define(version: 20141118102150) do
 
   create_table "images", force: true do |t|
     t.string   "title"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20141116151819) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.text     "address"
-    t.integer  "phone"
+    t.integer  "phone",           limit: 8
     t.string   "sex"
     t.date     "dob"
     t.string   "school"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20141116151819) do
     t.integer  "dance_years"
     t.string   "g_name"
     t.string   "place"
-    t.boolean  "admin",           default: false
+    t.boolean  "admin",                     default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
