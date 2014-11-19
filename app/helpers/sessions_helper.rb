@@ -41,5 +41,10 @@ module SessionsHelper
     session[:forwarding_url] = request.url if request.get?
   end
 
+  # Confirms an admin user.
+  def admin_user
+    redirect_to(root_url) unless (current_user && current_user.admin?)
+  end
+
 
 end

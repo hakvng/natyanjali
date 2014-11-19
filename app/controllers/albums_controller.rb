@@ -1,4 +1,6 @@
 class AlbumsController < ApplicationController
+
+  before_action :admin_user, only: [:create, :new, :edit, :create, :update, :destroy, :index, :show]
   # GET /albums
   def index
     @albums = Album.all

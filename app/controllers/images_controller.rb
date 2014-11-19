@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
 
+  before_action :admin_user, only: [:create, :new, :edit, :create, :update, :destroy]
   # GET /images
   def index
     @images = Image.all
@@ -48,14 +49,6 @@ class ImagesController < ApplicationController
     @image.destroy
     redirect_to images_path
    end
-
-  def make_default
-    @images = Image.find(params[:id])
-    @album = Album.find(params[:album_id])
-    @album.cover = @image.id
-    @album.save
-    redirect_to images_path
-  end
 
   private
 
