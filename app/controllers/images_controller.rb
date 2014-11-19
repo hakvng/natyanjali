@@ -5,9 +5,18 @@ class ImagesController < ApplicationController
     @images = Image.all
   end
 
+  def show
+    @image=Image.find(params[:id])
+  end
+
   # GET /image/new
   def new
-    @image = Image.new
+    @album = Album.find(params[:album_id])
+    @image = @Album.image.build
+  end
+
+  def edit
+    @image = Image.find(params[:id])
   end
 
   # POST /images
@@ -21,11 +30,37 @@ class ImagesController < ApplicationController
     end
   end
 
+  def update
+
+    @album = Album.find(params[:album_id])
+
+    @image = @album.images.find(params[:id])
+
+    if @image.update_attributes(image_params)
+      redirect_to action: 'index', notice: 'Image was successfully updated.'
+    else
+      render action: 'edit', alert: 'Error occured' 
+    end
+  end
+
+  def destroy
+    @image = Image.find(params[:id])
+    @image.destroy
+    redirect_to images_path
+   end
+
+  def make_default
+    @images = Image.find(params[:id])
+    @album = Album.find(params[:album_id])
+    @album.cover = @image.id
+    @album.save
+    redirect_to images_path
+  end
+
   private
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
-      params.require(:image).permit(:title, :story, :file)
+      params.require(:image).permit(:title, :file, :album_id)
     end
 
 end

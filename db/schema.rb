@@ -11,17 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118102150) do
+ActiveRecord::Schema.define(version: 20141119140259) do
+
+  create_table "albums", force: true do |t|
+    t.string   "name"
+    t.text     "event"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "images", force: true do |t|
     t.string   "title"
-    t.text     "story"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "file_file_name"
     t.string   "file_content_type"
     t.integer  "file_file_size"
     t.datetime "file_updated_at"
+    t.integer  "album_id"
   end
 
   create_table "users", force: true do |t|

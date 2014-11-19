@@ -6,6 +6,8 @@ class Image < ActiveRecord::Base
              :content_type => { :content_type => /\Aimage\/.*\Z/ },
              :size => { :in => 0..10000.kilobytes }
 
+  belongs_to :album
+
   def image_full
     self.file.url
   end

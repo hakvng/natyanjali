@@ -1,4 +1,5 @@
 DanceSchool::Application.routes.draw do
+  resources :albums
   resources :images
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
