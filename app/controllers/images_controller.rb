@@ -13,7 +13,7 @@ class ImagesController < ApplicationController
   # GET /image/new
   def new
     @album = Album.find(params[:album_id])
-    @image = @Album.image.build
+    @image = @album.images.build
   end
 
   def edit
