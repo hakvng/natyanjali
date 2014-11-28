@@ -3,7 +3,7 @@ class ImagesController < ApplicationController
   before_action :admin_user, only: [:create, :new, :edit, :create, :update, :destroy]
   # GET /images
   def index
-    @images = Image.all
+    @images = Image.paginate(page: params[:page])
   end
 
   def show
