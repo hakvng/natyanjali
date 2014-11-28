@@ -32,7 +32,7 @@ yearRange: "-100:+0"
 		</tr>
 
 		<tr>
-			<td> <%= f.input :phone %></td>
+			<td> <%= f.input :phone, input_html: { min: 0 } %></td>
 
 			<td> <%= f.input :sex %></td>
 		</tr>
