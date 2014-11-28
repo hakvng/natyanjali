@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
-  before_action :signed_in_user, only: [:show, :edit, :update, :index, :destroy]
+  before_action :signed_in_user, only: [:show, :edit, :update, :index, :destroy, :verify]
   before_action :correct_user,   only: [:edit, :update]
-  before_action :admin_user, only: [:index, :destroy]
+  before_action :admin_user, only: [:index, :destroy, :verify]
   before_action :auth_user,   only: :show
 
   def new
@@ -23,9 +23,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      sign_in @user
-      flash[:success] = "You have registered successfully!"
-      redirect_to @user
+      flash[:success] = "You have registered successfully! We will verify your request and notify through email soon."
+      redirect_to root_url
     else
       render 'new'
     end
@@ -48,6 +47,19 @@ class UsersController < ApplicationController
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
+    redirect_to users_url
+  end
+
+  def verify
+    @user = User.find(params[:id])
+    puts params[:id], @user
+    if @user.update_attribute(:verified, true)
+      flash[:success] = "Student verified"
+      #send mail
+    else
+      flash[:danger] = "Verification failed"
+      #send mail
+    end
     redirect_to users_url
   end
 

@@ -10,5 +10,7 @@ User.create!(name:  "Admin",
              email: "admin@admin.org",
              password:              "adminadmin",
              password_confirmation: "adminadmin",
-             admin: true)
+             admin: true,
+             verified: true,
+             phone: 9999999999)
 

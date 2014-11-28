@@ -4,6 +4,7 @@ DanceSchool::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   root 'static_pages#home'
+  match 'users/:id/verify', to: 'users#verify', via: :post, as: :verify_user
   match '/expression', to: 'static_pages#expression', via: :get
   match '/classes', to: 'static_pages#classes', via: :get
   match '/about', to: 'static_pages#about', via: :get
