@@ -64,3 +64,4 @@ end
 #papaer clip for file upload
 gem "paperclip", "~> 4.2"
 gem 'hermitage'
+gem 'will_paginate'

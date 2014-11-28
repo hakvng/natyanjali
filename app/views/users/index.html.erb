@@ -1,6 +1,6 @@
 <% provide(:title, 'All users') %>
 <h1>Students</h1>
-
+<%= will_paginate %>
 <ul class="users">
   <% @users.each do |user| %>
     <% if not user.admin? %>
@@ -13,3 +13,4 @@
     <% end %>
   <% end %>
 </ul>
+<%= will_paginate %>
