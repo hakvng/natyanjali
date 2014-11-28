@@ -70,7 +70,7 @@ yearRange: "-100:+0"
 		</tr>
 		
 		<tr>
-			<td>  <%= f.input :dance_years, label: "No of years studied" %></td>
+			<td>  <%= f.input :dance_years, label: "No of years studied", input_html: { max: 99, min: 0 } %></td>
 		</tr>
 		
 		<tr>

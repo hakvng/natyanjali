@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email, case_sensitive: false
   has_secure_password
   validates :password, length: { minimum: 6 }
+  validates :dance_years, length: {maximum: 2}, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 99 }
 
   def User.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
