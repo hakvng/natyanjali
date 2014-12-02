@@ -10,6 +10,10 @@ class User < ActiveRecord::Base
   validates :dance_years, allow_blank: true, length: {maximum: 2}, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 99 }
   validates :phone, length: {minimum: 10}, :numericality => { :greater_than => 0}
 
+  has_many :enrollments
+  has_many :courses, through: :enrollments
+  has_many :expenses
+
   def User.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
