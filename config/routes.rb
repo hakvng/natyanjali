@@ -1,4 +1,5 @@
 DanceSchool::Application.routes.draw do
+  resources :expenses
   resources :albums
   resources :images
   resources :users
