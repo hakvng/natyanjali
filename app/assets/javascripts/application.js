@@ -14,5 +14,4 @@
 //= require hermitage
 //= require jquery_ujs
 //= require bootstrap
-//= require turbolinks
 //= require_tree .
