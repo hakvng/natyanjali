@@ -14,3 +14,13 @@ User.create!(name:  "Admin",
              verified: true,
              phone: 9999999999)
 
+Course.create!(name: "Course1",
+               fee: 2000,
+               period: 6)
+Course.create!(name: "Course2",
+               fee: 2000,
+               period: 6)
+Course.create!(name: "Course3",
+               fee: 2000,
+               period: 6)
+
