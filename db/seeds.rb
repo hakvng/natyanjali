@@ -24,3 +24,28 @@ Course.create!(name: "Course3",
                fee: 2000,
                period: 6)
 
+10.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@dance.org"
+  password = "password"
+  phone = 9897658979
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password,
+               phone: phone)
+end
+
+5.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+10}@school.org"
+  password = "password"
+  phone = 9897658979
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password,
+               phone: phone,
+               verified: true)
+end
+

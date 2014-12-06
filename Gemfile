@@ -65,3 +65,4 @@ end
 gem "paperclip", "~> 4.2"
 gem 'hermitage'
 gem 'will_paginate'
+gem 'faker',                   '1.4.2'

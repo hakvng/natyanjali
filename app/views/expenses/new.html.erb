@@ -1,0 +1,20 @@
+<h2>Add expense</h2>
+<br/>
+<%= simple_form_for (@expense) do |f| %>
+<table class="expensetable">
+<tr>   
+    <td><%= f.input :name, label: "Category" %></td>
+    <td> <%= f.input :amount, input_html: { min: 0, step: 0.5 } %></td>
+    <td><%= f.input :detail, label: "Description" %></td>
+    <td><%= f.label :course_id, "Course:" %><%= f.select :course_id, options_from_collection_for_select(@courses, :id, :name) %></td>
+    <td><%= f.label :user_id, "Reg_no:" %><%= f.select :user_id, options_from_collection_for_select(@users, :id, :id) %></td>
+</tr>	
+<tr>
+<td>
+    <%= f.submit "Save" , style:"width:100px;height:40px", class:"btn btn-primary"%>
+</td>
+</tr>
+</table>
+<% end %>
+<div class="studentdetail">
+</div>
