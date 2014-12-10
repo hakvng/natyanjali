@@ -5,7 +5,7 @@ class CreateExpenses < ActiveRecord::Migration
       t.integer :course_id
       t.string :name
       t.text :detail
-      t.decimal :amount
+      t.decimal :amount, :precision => 8, :scale => 2
 
       t.timestamps
     end

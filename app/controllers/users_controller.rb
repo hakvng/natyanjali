@@ -1,12 +1,17 @@
 class UsersController < ApplicationController
 
-  before_action :signed_in_user, only: [:show, :edit, :update, :index, :destroy, :verify]
+  before_action :signed_in_user, only: [:show, :edit, :update, :index, :destroy, :verify, :detail]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user, only: [:index, :destroy, :verify]
-  before_action :auth_user,   only: :show
+  before_action :auth_user,   only: [:show, :show]
 
   def new
     @user = User.new
+  end
+
+  def detail
+    @user = User.find(params[:id])
+    render 'show', :layout => false
   end
 
   def show

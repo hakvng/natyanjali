@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20141202075522) do
 
   create_table "courses", force: true do |t|
     t.string   "name"
-    t.decimal  "fee",        precision: 10, scale: 0
+    t.decimal  "fee",        precision: 8, scale: 2
     t.integer  "period"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20141202075522) do
     t.integer  "course_id"
     t.string   "name"
     t.text     "detail"
-    t.decimal  "amount",     precision: 10, scale: 0
+    t.decimal  "amount",     precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -3,7 +3,7 @@ class ExpensesController < ApplicationController
   before_action :admin_user
 
   def index
-    @expenses=Expense.all
+    @expenses=Expense.paginate(page: params[:page])
   end
 
   def new
