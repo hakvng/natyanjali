@@ -30,6 +30,11 @@ class ExpensesController < ApplicationController
     end
   end
 
+  def destroy
+    Expense.find(params[:id]).destroy
+    flash[:success] = "Removed expense"
+    redirect_to expenses_url
+  end
 
   private
 
