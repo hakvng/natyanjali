@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141202075522) do
+ActiveRecord::Schema.define(version: 20141220202518) do
 
   create_table "albums", force: true do |t|
     t.string   "name"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20141202075522) do
     t.string   "place"
     t.boolean  "admin",                     default: false
     t.boolean  "verified",                  default: false
+    t.integer  "reg_no"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
