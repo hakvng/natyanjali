@@ -1,3 +1,11 @@
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: dance_dev
+  pool: 5
+  username: root
+  password:
 development:
   adapter: mysql2
   encoding: utf8
@@ -5,7 +13,7 @@ development:
   database: dance_dev
   pool: 5
   username: root
-  password: 999
+  password:
 test:
   adapter: mysql2
   encoding: utf8
@@ -13,4 +21,4 @@ test:
   database: myapp_test
   pool: 5
   username: root
-  password: 999
+  password:
