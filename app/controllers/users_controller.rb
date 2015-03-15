@@ -28,6 +28,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      #send mail
+      UserMailer.registration_success_email(@user).deliver
       flash[:success] = "You have registered successfully! We will verify your request and notify through email soon."
       redirect_to root_url
     else
@@ -61,9 +63,9 @@ class UsersController < ApplicationController
     if @user.update_attribute(:verified, true)
       flash[:success] = "Student verified"
       #send mail
+      UserMailer.welcome_email(@user).deliver
     else
       flash[:danger] = "Verification failed"
-      #send mail
     end
     redirect_to users_url
   end
