@@ -6,6 +6,7 @@ production:
   pool: 5
   username: njeerekkvjqqkn
   password: ZjFXLB-TVeyjEEG0MoCPVLJQmp
+  host: ec2-50-17-181-147.compute-1.amazonaws.com
 development:
   adapter: mysql2
   encoding: utf8
@@ -22,5 +23,3 @@ test:
   pool: 5
   username: root
   password:
-          Couldn't create database for {"adapter"=>"postgresql", "username"=>"njeerekkvjqqkn", "password"=>"ZjFXLB-TVeyjEEG0MoCPVLJQmp", "port"=>5432, "database"=>"ddn4hmo78mjaos", "host"=>"ec2-50-17-181-147.compute-1.amazonaws.com"}
-
