@@ -1,11 +1,11 @@
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
-  database: dance_dev
+  database: ddn4hmo78mjaos
   pool: 5
-  username: root
-  password:
+  username: njeerekkvjqqkn
+  password: ZjFXLB-TVeyjEEG0MoCPVLJQmp
 development:
   adapter: mysql2
   encoding: utf8
@@ -22,3 +22,5 @@ test:
   pool: 5
   username: root
   password:
+          Couldn't create database for {"adapter"=>"postgresql", "username"=>"njeerekkvjqqkn", "password"=>"ZjFXLB-TVeyjEEG0MoCPVLJQmp", "port"=>5432, "database"=>"ddn4hmo78mjaos", "host"=>"ec2-50-17-181-147.compute-1.amazonaws.com"}
+
