@@ -24,6 +24,8 @@ Course.create!(name: "Course3",
                fee: 2000,
                period: 6)
 
+Branch.create!(name: "Kothamangalam")
+
 10.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@dance.org"
