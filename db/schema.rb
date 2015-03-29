@@ -11,11 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141220202518) do
+ActiveRecord::Schema.define(version: 20150329075010) do
 
   create_table "albums", force: true do |t|
     t.string   "name"
     t.text     "event"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "branches", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -33,7 +39,12 @@ ActiveRecord::Schema.define(version: 20141220202518) do
     t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "branch_id"
   end
+
+  add_index "enrollments", ["branch_id"], name: "index_enrollments_on_branch_id", using: :btree
+  add_index "enrollments", ["course_id"], name: "index_enrollments_on_course_id", using: :btree
+  add_index "enrollments", ["user_id"], name: "index_enrollments_on_user_id", using: :btree
 
   create_table "expenses", force: true do |t|
     t.integer  "user_id"

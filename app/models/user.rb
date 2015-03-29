@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   has_many :enrollments
   has_many :courses, through: :enrollments
   has_many :expenses
+  has_many :branches, through: :enrollments
 
   def User.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
