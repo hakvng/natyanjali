@@ -1,0 +1,18 @@
+<% provide(:title, 'Applications') %>
+<h1>Course Enrollments</h1>
+<%= will_paginate %>
+
+ <% @enrollments.each do |enrollment| %>
+ 	<li>
+ 		<%=  link_to enrollment.user_id, "/users/#{enrollment.user_id}" %>
+ 		<%=  enrollment.user.name %>
+ 	<% if not enrollment.approved? %>
+       |<%= link_to "approve", approve_enrollment_path(enrollment), method: :post,
+                                  data: { confirm: "You sure?" } %>
+      <% end %>
+       | <%= link_to "delete", enrollment, method: :delete,
+                                  data: { confirm: "You sure?" } %> 
+ 	</li>
+ <% end %>
+
+<%= will_paginate %>

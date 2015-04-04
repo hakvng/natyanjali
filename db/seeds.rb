@@ -14,19 +14,19 @@ User.create!(name:  "Admin",
              verified: true,
              phone: 9999999999)
 
+branch=Branch.create!(name: "Kothamangalam")
+
 Course.create!(name: "Course1",
                fee: 2000,
-               period: 6)
+               period: 6, branch_id: branch.id)
 Course.create!(name: "Course2",
                fee: 2000,
-               period: 6)
+               period: 6, branch_id: branch.id)
 Course.create!(name: "Course3",
                fee: 2000,
-               period: 6)
+               period: 6, branch_id: branch.id)
 
-Branch.create!(name: "Kothamangalam")
-
-10.times do |n|
+5.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@dance.org"
   password = "password"
@@ -38,16 +38,17 @@ Branch.create!(name: "Kothamangalam")
                phone: phone)
 end
 
-5.times do |n|
+10.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+10}@school.org"
   password = "password"
   phone = 9897658979
-  User.create!(name:  name,
+  user=User.create!(name:  name,
                email: email,
                password:              password,
                password_confirmation: password,
                phone: phone,
                verified: true)
-end
+  user.enrollments.create!(course_id: rand(1..3))
 
+end

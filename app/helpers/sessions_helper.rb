@@ -46,5 +46,24 @@ module SessionsHelper
     redirect_to(root_url) unless (current_user && current_user.admin?)
   end
 
+  # Confirms a logged-in user.
+  def signed_in_user
+    unless signed_in?
+      store_location
+      flash[:danger] = "Please log in."
+      redirect_to signin_url
+    end
+  end
+
+  # Confirms the correct user.
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless current_user?(@user)
+  end
+
+  def auth_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless (current_user.admin? || current_user?(@user))
+  end
 
 end

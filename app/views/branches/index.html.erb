@@ -1,0 +1,8 @@
+<ul class="branches">
+  <% @branches.each do |branch| %>
+    <li>
+      <%= branch.name %> | <%= link_to "delete", branch, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+    </li>
+  <% end %>
+</ul>
