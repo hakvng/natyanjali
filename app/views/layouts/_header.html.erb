@@ -12,7 +12,7 @@
 </form>-->
           <% if signed_in? %>
             <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-weight:bold; box-shadow: 0 0 10px #E47D18;">
                 <%= "#{current_user.name}" %> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
@@ -30,15 +30,23 @@
             </li>
           <% else %>
 
-    <%= form_for(:session, url: sessions_path, style:'margin-bottom:0px',id:'loginform') do |f|  %>
-      <%= f.text_field :email, placeholder:"email id", class: "text", style:'padding-left:20px;
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      		<%= form_for(:session, url: sessions_path, id:'loginform') do |f|  %> 
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Enter User Credentials</h4>
+      </div>
+      <div class="modal-body">
+              <%= f.text_field :email, placeholder:"email id", class: "text", style:'padding-left:20px;
 background-color:transparent;
 border-left:none;
 		border-top:none;
 		border-right:none;
 		border-bottom-width: 1px;
 border-bottom-style: solid;
-border-bottom-color: #0ec405;
+border-bottom-color: #DA7E4C;
 		width:200px;
 		height:30px;
 		margin-left:20px;' %>
@@ -49,27 +57,38 @@ border-left:none;
 		border-right:none;
 		border-bottom-width: 1px;
 border-bottom-style: solid;
-border-bottom-color: #0ec405;
+border-bottom-color: #DA7E4C;
 		width:200px;
 		height:30px;
 		margin-left:20px;' %>
+      </div>
+      <div class="modal-footer">
+      	Want to join? <a href="/signup">Enroll</a> &nbsp;&nbsp;
+		<%= f.submit "Login", class: "btn btn-primary"%>
+      </div>
+  		<%end%>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
-      <%= f.submit "Login", class: "loginbtn"%>
-    <%end%>
+
+    <button type="button" class="btn btn-primary login-button" data-toggle="modal" data-target="#myModal">Login</button>
   <%end%>
 </div>
-</div><div style="top: 103px;" id="shdw" class="shdw"></div>
 </div>
-	<div class="serachmenucontainer" style="position: relative;">
- <div class="samplemenu">
-	
-	<div class="menu"> <a href="/">HOME</a> </div>
-	<div class="menu"> <a href="/expression">EXPRESSION</a> </div>
-	<div class="menu"> <a href="/images">GALLERY</a> </div>
-	<div class="menu"> <a href="/signup">ENROLLMENT</a> </div>
-	<div class="menu"> <a href="/classes">CLASSES & FEES</a> </div>
-	
-	<div class="menu"> <a href="/about">ABOUT US</a> </div>
-	<div class="menu"> <a href="/contact">CONTACT</a> </div>
-</div>	  
-	</div>
+<div style="top: 103px;" id="shdw" class="shdw"></div>
+</div>
+
+<div class="serachmenucontainer" style="position: relative;">
+	 <div class="samplemenu">
+		
+		<div class="menu"> <a href="/">HOME</a> </div>
+		<div class="menu"> <a href="/expression">EXPRESSION</a> </div>
+		<div class="menu"> <a href="/images">GALLERY</a> </div>
+		<div class="menu"> <a href="/signup">ENROLLMENT</a> </div>
+		<div class="menu"> <a href="/classes">CLASSES & FEES</a> </div>
+		
+		<div class="menu"> <a href="/about">ABOUT US</a> </div>
+		<div class="menu"> <a href="/contact">CONTACT</a> </div>
+	</div>	  
+</div>

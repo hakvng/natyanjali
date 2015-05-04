@@ -1,5 +1,35 @@
+.login-button{
+  margin-right: 120px;
+}
+
+.btn-primary{
+  border-color: rgba(255, 169, 19, 0.66) rgba(0, 0, 0, 0.1) rgba(141, 74, 9, 0.71);
+  background-image: linear-gradient(to bottom, #E49228, #96541C);
+  background-color: #F9A648;
+
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #F9A648;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #F9A648;
+}
+
+.thumbnails{
+  margin-top: 220px;
+  margin-left: 0px;
+}
+
+.thumbnail{
+  border: 3px solid rgba(173, 60, 0, 0.6);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px #DA8E0B;
+}
+
 h2 {
-        color:#d4008c;
+        color:#DA7E4C;
         margin-left:50px;
         //padding-top:200px;
         text-decoration:underline;
@@ -222,6 +252,14 @@ width:auto;
 color:red;
 }
 
+/* login error */
+.alert{
+color: red;
+float: right;
+height: auto;
+width: auto;
+}
+
 .signup {
                         //width:1024px;
                         height:auto;
@@ -238,9 +276,9 @@ color:red;
         //background-color:yellow;
         text-align:left;
         }
-/*.signuptable label {
-width:100px;
-}*/
+.signuptable label {
+  font-weight: bold;
+}
 
 .signuptable td{
                 width:200px;
@@ -251,12 +289,22 @@ width:100px;
                         height:20px;
                         }
 
- .signuptable .next {
-   width:60px;
-        height:20px;
-        }
+ .signuptable .next{
+  width:60px;
+  height:20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  }
+   .signuptable .prev{
+  width:60px;
+  height:20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  }
 h4 {
-        color:#d4008c;
+        color:#DA7E4C;
         margin-left:160px;
         text-decoration:underline;
         text-align:left;
@@ -282,14 +330,15 @@ h4 {
     background-color: transparent;
     vertical-align: baseline;
     border: none;
-    color: #0ec405;
+    font-weight: bold;
+    color: #DA7E4C;
     font-family: calibri;
     font-size:18px;
 }
 .loginbtn:hover {
     background-color: transparent;
     border: none;
-    color: #0ec405;
+    color: #F85903;
     font-family: calibri;
     font-size:18px;
     text-shadow:1px 1px #555656;
@@ -442,7 +491,7 @@ border-bottom-color: #0ec405;
 margin-right:100px;	}
 
 .loginbtn a{
-        color:#0ec405;
+        color:#DA7E4C;
 		font-family:calibri;
 		font-size:18px;
 		position: relative;
@@ -451,7 +500,7 @@ margin-right:100px;	}
   	-ms-transform: translateY(-25%);
   	transform: translateY(-25%);}
 .loginbtn a:hover{
-		color:#0ec405;
+		color:#DA7E4C;
 			text-shadow: 1px 1px #555656;
 		font-family:calibri;
 		position: relative;
@@ -520,7 +569,7 @@ margin-right:100px;	}
         padding-right-ltr-source: physical;
         padding-right-rtl-source: physical;
     //background-color:#000;
-	border-bottom: 5px solid #d4008c;
+	border-bottom: 5px solid #954D20;
        /* border-bottom-width: 5px;
         border-bottom-style: solid;
         border-bottom-color: #003F7E;*/
@@ -589,21 +638,21 @@ color:#F70EFF;}
  
 
 ::-webkit-input-placeholder {
-   color: #0ec405;
+   color: #DA7E4C;
 }
 :-input-placeholder {
-		color:30ec405;
+		color:#DA7E4C;
 		}
 :-moz-placeholder { /* Firefox 18- */
-   color: #0ec405;  
+   color: #DA7E4C;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #0ec405;  
+   color: #DA7E4C;  
 }
 
 :-ms-input-placeholder {  
-   color: #0ec405;  
+   color: #DA7E4C;  
 }
 .searchbox > :hover {
 		border-bottom-width: 1px;
@@ -621,7 +670,7 @@ border-bottom-color: #000;
 		border-right:none;
 		border-bottom-width: 1px;
 border-bottom-style: solid;
-border-bottom-color: #0ec405;
+border-bottom-color: #DA7E4C;
 		
 		}
 
@@ -684,7 +733,7 @@ border-bottom-color: #0ec405;
         
         border-bottom-width: 5px;
         border-bottom-style: solid;
-        border-bottom-color: #d4008c;} 
+        border-bottom-color: #954D20;} 
         
 #searchform {width:300px;
 display: -moz-box }                      
@@ -707,7 +756,7 @@ background-color:#000;
 	//margin:0 auto;
 	//margin-left:100px;
 	overflow:hidden;
-	box-shadow: 0 0 10px #555656;}
+	box-shadow: 0px 0px 10px #E47D18;}
 
 
 	
@@ -916,7 +965,7 @@ height:340px;
 	cursor:pointer;
 		height:50px;
 		overflow:hidden;
-		background-color:#d4008c;
+		background-color:#954D20;
 		float:left;
 		//margin-left:20px;
 		margin-right:auto;
@@ -937,7 +986,11 @@ height:340px;
 		text-align:center;
 		margin-left:10px;
 		margin-right:auto;
+    color:#F6AD3F;
 		}
+.menu:focus a{
+  color:#fff;
+}
 .menu:hover a{	
 		color:#fff;
 		}
@@ -965,14 +1018,25 @@ z-index: 1;}*/
 
 
 body {	
-		background-color: #F5F5F5;
-        border: 1px solid rgba(0, 0, 0, 0.15);
+		background-image:url(<%= asset_path 'bg.jpg' %>);
+    border: 1px solid rgba(0, 0, 0, 0.15);
 		width:100%;
 		background-size:100%;
 		}
 
 a {
-		text-decoration:none;}
+		text-decoration:none;
+    color: #EC6319;
+  }
+  a:hover{
+      color: #FFA318;
+    }
+  a:visited{
+      color: #FFA318;
+    }
+  a:active{
+      color: #FFF;
+    }
 		
 /* About Us */
 .aboutus, .teacher, .school, .manager{
@@ -1024,9 +1088,10 @@ a {
 
 .smenu a{
 			margin-left:20px;
+      color:#FFA318;
 			}
 .textarea{
-		margin-top:20px;
+		//margin-top:20px;
 width:80%;
 height:400px;
 margin-left:auto;
@@ -1040,11 +1105,11 @@ display:block;
 	}
 .arcon {margin-top:20px;
 width:80%;
-height:400px;
+//height:400px;
 margin-left:auto;
 margin-right:auto;
 //background-color:#000;
-box-shadow: 0 0 10px #555656;
+box-shadow: 0 0 10px #E47D18;
 	border-radius:10px;
 overflow:hidden;
 position:relative;
@@ -1054,7 +1119,7 @@ padding-bottom:20px;
 .smenu {
 		width:auto;
 		//height:30px;
-		background-color: rgba(179, 177, 178, 0.62);
+		background-color: rgba(167, 108, 32, 0.6);
 		float:left;
 		//margin-left:20px;
 		margin-right:auto;
@@ -1066,7 +1131,7 @@ padding-bottom:20px;
 .smenu:hover {
 		width:auto;
 		//height:30px;
-		background-color:#fff;
+		background-color: rgba(17, 9, 0, 0.6);
 		float:left;
 		//margin-left:20px;
 		margin-right:auto;
@@ -1107,7 +1172,7 @@ position:relative;
 }
 
 h3 {
-  color:#d4008c;
+  color:#DA7E4C;
 font-family:calibri;
 font-size:25px;
 	}	
@@ -1116,7 +1181,7 @@ hr {
 	
 	}
 p{
-   	color:#197b9e;
+   	color:#DECB93;
 	//padding-left:20px;
 	//padding-right:20px;
 	font-family:calibri;
@@ -1154,7 +1219,7 @@ p{
 	padding-left:50px;
 	}}
 td {
-color:#197b9e;}
+color:#fff;}
 th {
 	color:#d4008c;}
 .contactconatiner
@@ -1187,6 +1252,7 @@ th {
 	//background-color:green;
 	margin-left:50px;
 	margin-top:30px;
+  box-shadow: 0px 0px 16px #8CECE5;
 	}
 table.expensetable{
     margin-left: auto;
