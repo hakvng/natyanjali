@@ -15,6 +15,12 @@
 /log/*.log
 /tmp
 /.rvmrc
+/.swp
+/.swo
+/.key
+/.crt
+/.csr
+/.key
 *~
 *#
 /public/system/*
