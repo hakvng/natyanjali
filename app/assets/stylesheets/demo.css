@@ -1,0 +1,42 @@
+
+#responsive_slider{
+	display:none;
+	max-width:620px;
+	margin:0 auto;
+	margin-top:10px;
+	/*padding-bottom:80px;*/
+}
+
+#banner-fade {
+	margin-bottom: 60px;
+}
+
+ul.bjqs-controls.v-centered li a{
+	display:block;
+	padding:4px;
+	background:#1B1B1B;
+	color:#5D5C5C;
+	text-decoration: none;
+}
+
+ul.bjqs-controls.v-centered li a:hover{
+	color:#fff;
+}
+
+ol.bjqs-markers li a{
+	padding:5px 10px;
+	background:#000;
+	color:#fff;
+	margin:5px;
+	text-decoration: none;
+}
+
+ol.bjqs-markers li.active-marker a,
+ol.bjqs-markers li a:hover{
+	background: #1B1B1B;
+}
+
+p.bjqs-caption{
+	display:none;
+	background: rgba(255,255,255,0.5);
+}

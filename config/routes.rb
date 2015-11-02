@@ -1,4 +1,13 @@
 DanceSchool::Application.routes.draw do
+  
+  resources :enrollments
+  post '/enrollments/:id/approve' => 'enrollments#approve', as: :approve_enrollment
+  get '/applications' => 'enrollments#applications', as: :enrollments_applications
+
+  resources :branches do
+    resources :courses
+  end
+
   resources :expenses
   resources :albums
   resources :images

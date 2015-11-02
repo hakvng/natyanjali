@@ -11,11 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141202075522) do
+ActiveRecord::Schema.define(version: 20150329112915) do
 
   create_table "albums", force: true do |t|
     t.string   "name"
     t.text     "event"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "branches", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -26,14 +32,21 @@ ActiveRecord::Schema.define(version: 20141202075522) do
     t.integer  "period"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "branch_id"
   end
+
+  add_index "courses", ["branch_id"], name: "index_courses_on_branch_id", using: :btree
 
   create_table "enrollments", force: true do |t|
     t.integer  "user_id"
     t.integer  "course_id"
+    t.boolean  "approved",   default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "enrollments", ["course_id"], name: "index_enrollments_on_course_id", using: :btree
+  add_index "enrollments", ["user_id"], name: "index_enrollments_on_user_id", using: :btree
 
   create_table "expenses", force: true do |t|
     t.integer  "user_id"
@@ -80,6 +93,7 @@ ActiveRecord::Schema.define(version: 20141202075522) do
     t.string   "place"
     t.boolean  "admin",                     default: false
     t.boolean  "verified",                  default: false
+    t.integer  "reg_no"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

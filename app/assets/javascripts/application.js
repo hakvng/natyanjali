@@ -10,8 +10,4 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require hermitage
-//= require jquery_ujs
-//= require bootstrap
-//= require_tree .
+//= reqiure_self

@@ -3,12 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.8'
 
-# Use sqlite3 as the database for Active Record
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
-gem 'unicorn'
-gem 'bootstrap-sass', '2.3.2.0'
+
 gem 'sprockets', '2.11.0'
 gem 'simple_form'
 
@@ -26,7 +23,7 @@ gem 'factory_girl_rails', '4.2.0'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -36,8 +33,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do
-  gem 'mysql2'
+group :development, :test do
+  gem 'sqlite3'
 end
   gem 'rspec-rails', '2.13.1'
 

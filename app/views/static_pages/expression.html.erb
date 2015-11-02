@@ -1,101 +1,219 @@
+<!DOCTYPE html>
+<html class=" js cssanimations csstransitions" lang="en"><head>
+         <title>Natyanjali</title> 
+        <%= stylesheet_link_tag "home" %>
+        <%= stylesheet_link_tag "responsive_menu" %>
+        <%= stylesheet_link_tag "bjqs" %>
+        <%= stylesheet_link_tag "demo" %>
+        <%= stylesheet_link_tag "media_queries" %>
+        <!-- css3-mediaqueries.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <![endif]-->
+		    <%= javascript_include_tag "jquery.js" %>
+		    <%= javascript_include_tag "bjqs_1.js" %>
+		    <%= javascript_include_tag "index_slide.js" %>
+		    <%= javascript_include_tag "modernizr.js" %>
+        <!--responsive menu-->
+        <script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
 
-	<script src="/assets/javascripts/exp.js"></script>
-	<div class="maincontainer">		
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
 
-		<div class="submenu">
-			<div class="smenu"><a id="button1" href="#" class="barath" tabindex="1">Barathanatyam</a></div>
-			<div class="smenu"><a id="button2" href="#" tabindex="2" >Mohiniyattam</a></div>
-			<div class="smenu"><a id="button3" href="#" class="qwerty" tabindex="3">Kathakali</a></div>
-			<div class="smenu"><a id="button4" href="#" tabindex="4">Kathak</a></div>
-			<div class="smenu"><a id="button5" href="#" class="qwerty" tabindex="3">Odissi</a></div>
-			<div class="smenu"><a id="button6" href="#" tabindex="4">Kuchipudi</a></div>
-			<div class="smenu"><a id="button7" href="#" tabindex="4">Manipuri</a></div>
-		</div>
-	<div id="content" class="arcon"> 
-		<div id="faq">
-		 <div id="fa">
-			<h3 >Bharatanatyam</h3>
-				<hr>
-					<p>
-						Bharatanatyam is a classical dance from the South Indian state of Tamil Nadu, practiced predominantly in modern times by women. The dance is usually accompanied by classical Carnatic music. Its inspirations come from the sculptures of the ancient temple of Chidambaram. It was codified and documented as a performing art in the 19th century by four brothers known as the Thanjavur Quartet whose musical compositions for dance form the bulk of the Bharatanatya repertoire even today.
-					</p>
-		</div>
-		<div class="img"><%= image_tag("bharatanatyam1.png") %></div>
-		</div>
-		<div id="her">
-		<div id="he" class="hr">
-			<h3 >Mohiniyattam</h3>
-				<hr>
-					<p >
-						Mohiniyattam is a beautiful dance form of the women of Kerala and it is one of the classical dances of India too.Among the various styles detailed by Bharata Muni in his Natya Shastra, Mohiniyattam most resembles the kaisiki type.Consisting, as it does, of gentle Angahara-s and belonging to the Lasya style which is feminine, tender and graceful: The kaisiki style is most appropriate for the erotic sentiment and its related expressions.
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+    <style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+    <body>
+    <div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+
+        <div class="container">
+            <div class="top_wrpr"> <a href="/"><img src=<%= "#{asset_url("logo.png")}"%>  border="0"></a> 
+                
+              
+            </div><!--/ top_wrpr ends -->
+			<header>
+				<p class="top_links">
+						<a href="/">Home</a>
+						<a class="current-link" href="/expression">Expression</a>
+			          <a href="/classes">Classes & Fees</a>
+			          <a href="/about">About Us</a>
+			          <a href="/contact">Contact Us</a>
+				</p>
+			</header>
+            <!--responsive_menu-->
+            <nav id="res_menu">
+		<ul style="" class="clearfix">
+			<li><a href="/">Home</a></li>
+			<li><a class="current-link" href="/expression">Expression</a></li>
+			<li><a href="/classes">Classes & Fees</a></li>
+			<li><a href="/about">About Us</a></li>
+			<li><a href="/contact">Contact Us</a></li>
+		</ul>
+		<a href="#" id="pull">Menu</a>
+	</nav>
+    		<!--responsive slider-->
+            <div id="responsive_slider">
+
+      <!--  Outer wrapper for presentation only, this can be anything you like -->
+      <div style="height: 0px; max-width: 280px; position: relative;" id="banner-fade">
+
+        <!-- start Basic Jquery Slider -->
+        <ul style="height: 0px; width: 100%; display: block;" class="bjqs">
+          <li style="height: 0px; width: 100%; display: list-item;" class="bjqs-slide"><img style="height: 0px; width: 100%;" src=<%= "#{asset_url("kathak.png")}"%>></li>
+          <li style="height: 0px; width: 100%; display: list-item;" class="bjqs-slide"><img style="height: 0px; width: 100%;" src=<%= "#{asset_url("bharatanatyam1.png")}"%>></li>
+          <li style="height: 0px; width: 100%; display: list-item;" class="bjqs-slide"><img style="height: 0px; width: 100%;" src=<%= "#{asset_url("kathakali.png")}"%>></li>
+          <li style="height: 0px; width: 100%; display: list-item;" class="bjqs-slide"><img style="height: 0px; width: 100%;" src=<%= "#{asset_url("kuchipudi.png")}"%>></li>
+          <li style="height: 0px; width: 100%; display: list-item;" class="bjqs-slide"><img style="height: 0px; width: 100%;" src=<%= "#{asset_url("manipuri.png")}"%>></li>
+          <li style="height: 0px; width: 100%; display: list-item;" class="bjqs-slide"><img style="height: 0px; width: 100%;" src=<%= "#{asset_url("mohiniyatam.png")}"%>></li>
+        </ul>
+        <!-- end Basic jQuery Slider -->
+
+      <ul class="bjqs-controls v-centered">
+	  <li class="bjqs-prev"><a style="top: -1.40351%;" href="#" data-direction="previous">Prev</a></li>
+	  <li class="bjqs-next"><a style="top: -1.40351%;" href="#" data-direction="forward">Next</a></li>
+	  </ul>
+	  <ol style="left: 90px;" class="bjqs-markers h-centered">
+		<li class=""><a href="#">1</a></li><li class="active-marker">
+			<a href="#">2</a></li><li class=""><a href="#">3</a></li>
+		<li class=""><a href="#">4</a></li><li class="">
+			<a href="#">5</a></li>
+		<li class="">
+			<a href="#">6</a></li>
+	  </ol>
+	  </div>
+      <!-- End outer wrapper -->
+
+     
+
+    </div>
+			<div style="background-position: 1350% 0%;" id="da-slider" class="da-slider">
+				<div class="da-slide da-slide-fromright da-slide-current">
+                	
+					<div class="da-img">
+				
+                 <h3 style="color:yellow;"> KATHAK </h3><p>Originating from north Indian states, 
+				 In ancient Indian temples Brahmin priests used
+				 to narrate the stories of gods and goddesses through
+				 dance, they were known as kathakar and the dance came 
+				 to be known as "kathak". Kathak traces its origins to the
+				 nomadic bards of ancient northern India, known as Kathaks,
+				 or storytellers.[24] Its form today contains traces of temple and ritual dances, 
+				 and the influence of the bhakti movement. From the 16th century onwards it 
+				 absorbed certain features of Persian dance and Central Asian dance which were 
+				 imported by the royal courts of the Mughal era. There are three major schools or 
+				 gharanas of Kathak from which performers today generally draw their lineage:
+				 the gharanas of Benares, Jaipur and Lucknow.</p>
+				  <div style="margin-top:10px;"></div></div>
+					<h2><img src=<%= "#{asset_url("kathak.png")}"%> alt="Neena Prasad"></h2>						
+				</div>
+                <div class="da-slide da-slide-toleft">
+                	<div class="da-img">
+                    <h3 style="color:yellow;"> Bharatanatyam </h3><p>	Bharatanatyam is a classical dance from the South Indian state of Tamil Nadu,
+					practiced predominantly in modern times by women. The dance is usually accompanied
+					by classical Carnatic music. Its inspirations come from the sculptures of the ancient
+					temple of Chidambaram. It was codified and documented as a performing art in the 19th century
+					by four brothers known as the Thanjavur Quartet whose musical compositions for dance form the bulk 
+					of the Bharatanatya repertoire even today.</p>
+                  </div>
+					<h2><img src=<%= "#{asset_url("bharatanatyam1.png")}"%> alt="Neena Prasad"></h2>
+									
+				</div>
+                <div class="da-slide da-slide-toleft">
+                	<div class="da-img">
+                    <h3 style="color:yellow;"> Kathakali </h3><p>Kathakali is a highly stylized classical dance-drama form which originated from Kerala in the 17th century.
+					This classical dance form is particularly noticed for dancer's elaborate costume, towering head gear, billowing skirts,
+					and long silver nails. Recent developments in Kathakali over the years include improved looks, refined gestures and added
+					themes besides more ornate singing and precise drumming.
+					Kathakali is performed regularly at festivals in temples,
+					at cultural shows for connoisseurs and also at international events,
+					occasionally in fusion dance experiments. </p>
+                  </div>
+					<h2><img src=<%= "#{asset_url("kathakali.png")}"%> alt="Neena Prasad"></h2>
+									
+				</div>
+                <div class="da-slide da-slide-toleft">
+                	<div class="da-img" ><!--style="width:40%; top:110px;"-->
+                    <h3 style="color:yellow;"> Kuchipudi </h3><p>Kuchipudi  is a classical dance from the South Indian 
+					state of Andhra Pradesh. Kuchipudi is the name of a village
+					in the Divi Taluka of Krishna district that borders the Bay 
+					of Bengal and also the surname of the resident Brahmins practicing
+					this traditional dance form, it acquired the present name. The performance
+					usually begins with some stage rites, after which each of
+					the character comes on to the stage and introduces him/herself 
+					with a dharavu  to introduce the identity, set the mood, of the 
+					character in the drama. The drama then begins. The dance is accompanied
+					by song which is typically Carnatic music. The singer is accompanied by mridangam, 
+					violin, flute and the tambura. Ornaments worn by the artists are generally made of a light weight wood called Boorugu. 
+</p>
+                  </div>
+					<h2><img src=<%= "#{asset_url("kuchipudi.png")}"%> alt="Neena Prasad"></h2>
+									
+				</div>
+				<div class="da-slide">
+                	<div class="da-img">
+                    <h3 style="color:yellow;"> Manipuri </h3><p>The traditional Manipuri dance style embodies delicate, 
+					lyrical and graceful movements. The aim is to make rounded 
+					movements and avoid any jerks, sharp edges or straight lines.
+					It is this which gives Manipuri dance its undulating and soft appearance. 
+					The foot movements are viewed as part of a composite movement of the whole body. 
+					The dancer puts his or her feet down, even during vigorous steps, with the balls of 
+					the feet touching the ground first. The ankle and knee joints are effectively used as 
+					shock absorbers. The dancer’s feet are neither put down nor lifted up at the precise rhythmic 
+					points of the music but rather slightly earlier or later to express the same rhythmic points most effectively.</p>
+                  </div>
+					<h2><img src=<%= "#{asset_url("manipuri.png")}"%> alt="Neena Prasad"></h2>
+									
+				</div>
+                <div class="da-slide">
+                	<div class="da-img">
+                    <h3 style="color:yellow;"> Mohiniyattam </h3><p>Mohiniyattam is a beautiful dance form of the women of Kerala and it is one of the classical dances of India too.Among the various styles detailed by Bharata Muni in his Natya Shastra, Mohiniyattam most resembles the kaisiki type.Consisting, as it does, of gentle Angahara-s and belonging to the Lasya style which is feminine, tender and graceful: The kaisiki style is most appropriate for the erotic sentiment and its related expressions.
 	It has often been said that the movements of the limbs and body of the danseuse of Mohiniyattam should be gentle and graceful like the waves in a calm sea or the swaying of the paddy plants in the field, in a breeze.To know some basic principles that govern the Mohiniyattam dance style will be of great help for all artistes and art lovers to enjoy this art form.
 	Like many other Indian dance forms the aspects of Mohiniyattam can be divided mainly into two - Nritha and Nrithya . When a child starts learning Mohiniyattam she /he starts first with the Nritha .
-	upon the level of the knees there are five such stances in Mohiniyattam.These are the Sama mandalam,Aramandalam, Muzhumandalam,Mukkalmandalam and Kaalmandalam.
-					</p>
-		</div>
-		<div class="img"><%= image_tag("mohiniyatam.png",style:"margin-left:30px") %></div>
-		</div>
-		<div id="and">
-		<div id="an">
-			<h3 >Kathakali</h3>
-			<hr>
-				<p>
-					Kathakali is a highly stylized classical dance-drama form which originated from Kerala in the 17th century. This classical dance form is particularly noticed for dancer's elaborate costume, towering head gear, billowing skirts, and long silver nails. Recent developments in Kathakali over the years include improved looks, refined gestures and added themes besides more ornate singing and precise drumming. Kathakali is performed regularly at festivals in temples, at cultural shows for connoisseurs and also at international events, occasionally in fusion dance experiments. 
-				</p>
-		</div>
-		<div class="img"><%= image_tag("kathakali.png") %></div>
-		</div>
-		 
-		 
-		 
-		 <div id="enj">
-		 <div id="en">
-			<h3 >Kathak</h3>
-				<hr>
-					<p>
-						Originating from north Indian states, In ancient Indian temples Brahmin priests used to narrate the stories of gods and goddesses through dance, they were known as kathakar and the dance came to be known as "kathak". Kathak traces its origins to the nomadic bards of ancient northern India, known as Kathaks, or storytellers.[24] Its form today contains traces of temple and ritual dances, and the influence of the bhakti movement. From the 16th century onwards it absorbed certain features of Persian dance and Central Asian dance which were imported by the royal courts of the Mughal era. There are three major schools or gharanas of Kathak from which performers today generally draw their lineage: the gharanas of Benares, Jaipur and Lucknow.
-					</p>
-		</div>
-		<div class="img"><%= image_tag("kathak.png") %></div>
-		</div>
-		
-		
-		
-		
-		<div id="odissi">
-		 <div id="odi">
-			<h3 >Odissi</h3>
-				<hr>
-					<p>
-						It originates from the state of  Odisha, in eastern India. It is the oldest surviving dance form of India on the basis of archaeological evidences. The classic treatise of Indian dance, Natya Shastra, refers to it as Odra-Magadhi. It was suppressed under the British Raj, but has been reconstructed since India gained independence. It is particularly distinguished from other classical Indian dance forms by the importance it places upon the Tribhangi ,the independent movement of head, chest and pelvis  and upon the basic square stance known as Chauka or Chouka that symbolises Lord Jagannath. This dance is characterised by various Bhangas ,which involves stamping of the foot and striking various postures as seen in Indian sculptures. 
-					</p>
-		</div>
-		<div class="img odissi"><%= image_tag("odissi.png",style:"margin-left:40px") %></div>
-		</div>
-		
-		<div id="kuchipudi">
-		 <div id="kuchi">
-			<h3 >Kuchipudi</h3>
-				<hr>
-					<p>
-						Kuchipudi  is a classical dance from the South Indian state of Andhra Pradesh. Kuchipudi is the name of a village in the Divi Taluka of Krishna district that borders the Bay of Bengal and also the surname of the resident Brahmins practicing this traditional dance form, it acquired the present name. The performance usually begins with some stage rites, after which each of the character comes on to the stage and introduces him/herself with a dharavu  to introduce the identity, set the mood, of the character in the drama. The drama then begins. The dance is accompanied by song which is typically Carnatic music. The singer is accompanied by mridangam, violin, flute and the tambura. Ornaments worn by the artists are generally made of a light weight wood called Boorugu. 
-					</p>
-		</div>
-		<div class="img kuch"><%= image_tag("kuchipudi.png",style:"margin-left:50px") %></div>
-		</div>
-		
-		<div id="manipuri">
-		 <div id="mani">
-			<h3 >Manipuri</h3>
-				<hr>
-					<p>
-						The traditional Manipuri dance style embodies delicate, lyrical and graceful movements. The aim is to make rounded movements and avoid any jerks, sharp edges or straight lines. It is this which gives Manipuri dance its undulating and soft appearance. The foot movements are viewed as part of a composite movement of the whole body. The dancer puts his or her feet down, even during vigorous steps, with the balls of the feet touching the ground first. The ankle and knee joints are effectively used as shock absorbers. The dancer’s feet are neither put down nor lifted up at the precise rhythmic points of the music but rather slightly earlier or later to express the same rhythmic points most effectively.
-					</p>
-		</div>
-		<div class="img mani"><%= image_tag("manipuri.png",style:"margin-left:30px") %></div>
-		</div>
-		
-		
-	</div>
-</div>	 
-
+	upon the level of the knees there are five such stances in Mohiniyattam.These are the Sama mandalam,Aramandalam, Muzhumandalam,Mukkalmandalam and Kaalmandalam.</p>
+                  </div>
+					<h2><img src=<%= "#{asset_url("mohiniyatam.png")}"%> alt="Neena Prasad"></h2>
+									
+				</div>
+				<div class="da-slide">
+                	<div class="da-img">
+                    <h3 style="color:yellow;"> Odisha </h3><p>It originates from the state of  Odisha, in eastern India. It is the oldest surviving dance form of India on the basis of archaeological evidences. The classic treatise of Indian dance, Natya Shastra, refers to it as Odra-Magadhi. It was suppressed under the British Raj, but has been reconstructed since India gained independence. It is particularly distinguished from other classical Indian dance forms by the importance it places upon the Tribhangi ,the independent movement of head, chest and pelvis  and upon the basic square stance known as Chauka or Chouka that symbolises Lord Jagannath. This dance is characterised by various Bhangas ,which involves stamping of the foot and striking various postures as seen in Indian sculptures. </p>
+                  </div>
+					<h2><img src=<%= "#{asset_url("odissi.png")}"%> alt="Neena Prasad"></h2>
+									
+				</div>
+				<nav class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>
+				</nav>
+			<nav class="da-dots"><span class=""></span><span class=""></span><span class=""></span><span class="da-dots-current"></span><span></span><span></span></nav></div>
+            <div id="footer">
+            	<div class="copyright">
+                	
+                </div>
+            <!--    <div class="iantz"><script language="JavaScript">
+            
+            document.write('Copyright &copy; &nbsp;' );
+            document.write(new Date().getFullYear());
+            document.write(' Natyanjali');
+            
+            </script></div>-->
+<div class="clr"></div>
+            </div><!--footer ends here-->
+        </div>
+        <%= javascript_include_tag "jquery_002.js" %>
+</body></html>
