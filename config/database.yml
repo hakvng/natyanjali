@@ -21,7 +21,9 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: natyanjali
+  host: ec2-107-21-223-72.compute-1.amazonaws.com
+  port: 5432
+  database: d9ou6389jkdcbh
   pool: 5
-  username: natyanjali
-  password: password1
+  username: qtrdwelercqoam
+  password: HBbkOe62gb4aQZYUiMLJ9_7NFd
