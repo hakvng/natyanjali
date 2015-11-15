@@ -33,10 +33,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development, :test do
-  gem 'sqlite3'
-end
-  gem 'rspec-rails', '2.13.1'
+gem 'rspec-rails', '2.13.1'
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
