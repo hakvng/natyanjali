@@ -1,17 +1,17 @@
 jQuery(function($) {'use strict',
-	
+
 	//Countdown js
 	 $("#countdown").countdown({
 			date: "10 july 2017 12:00:00",
 			format: "on"
 		},
-		
+
 		function() {
 			// callback function
 		});
-	
 
-	
+
+
 	//Scroll Menu
 
 	function menuToggle()
@@ -27,15 +27,15 @@ jQuery(function($) {'use strict',
 				}
 			});
 		}else{
-			
+
 			$('.main-nav').addClass('fixed-menu animated slideInDown');
-				
+
 		}
 	}
 
 	menuToggle();
-	
-	
+
+
 	// Carousel Auto Slide Off
 	$('#event-carousel, #twitter-feed, #sponsor-carousel ').carousel({
 		interval: false
@@ -75,8 +75,8 @@ jQuery(function($) {'use strict',
 
 	map = new GMaps({
 		el: '#gmap',
-		lat: 43.04446,
-		lng: -76.130791,
+		lat: 10.012198,
+		lng: 76.626358,
 		scrollwheel:false,
 		zoom: 16,
 		zoomControl : false,
@@ -99,7 +99,7 @@ jQuery(function($) {'use strict',
 	});
 
 
-	var styles = [ 
+	var styles = [
 
 	{
 		"featureType": "road",
@@ -140,7 +140,7 @@ jQuery(function($) {'use strict',
 	map.addStyle({
 		styledMapName:"Styled Map",
 		styles: styles,
-		mapTypeId: "map_style"  
+		mapTypeId: "map_style"
 	});
 
 	map.setStyle("map_style");
