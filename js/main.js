@@ -89,8 +89,8 @@ jQuery(function($) {'use strict',
 
 	var image = 'images/map-icon.png';
 	map.addMarker({
-		lat: 43.04446,
-		lng: -76.130791,
+		lat: 10.012198,
+		lng: 76.626358,
 		icon: image,
 		animation: google.maps.Animation.DROP,
 		verticalAlign: 'bottom',
