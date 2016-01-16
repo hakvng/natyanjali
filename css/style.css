@@ -235,12 +235,10 @@ i.camera:hover{
 i.bulb{
 	width: 56px;
     height: 56px;
-    background: url(../images/img-sprite2.png)no-repeat -333px -86px;
     float: left;
     vertical-align: middle;
 }
 i.bulb:hover{
-    background: url(../images/img-sprite2.png)no-repeat -332px -11px;
 }
 .ourservices h5 a{
     font-size:1.8em;
