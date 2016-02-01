@@ -5,6 +5,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 body{
 	font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
 }
 body a{
     transition:0.5s all;
